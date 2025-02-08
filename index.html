@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style.css">
+    
+
+    <style>
+        body{
+           /** background-color: #8BC6EC;
+            background-image: linear-gradient(135deg, #8dC58C 0%, #8c8ea7 100%);**/
+            background-color: #00DBDE;
+            background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class=" w-[100vw] h-[100vh] flex justify-center items-center ">
+
+        <div class=" flex flex-col gap-7">
+            <h1 class="text-red-600 text-2xl font-semibold text-center" id="a">PASSWORD GENERATOR</h1>
+
+            <div class="flex justify-between">
+                <input readonly  placeholder="Password" type="text" name="" id="" data-passwordDisplay class="w-[90%] rounded p-4 py-2" >
+
+                <button data-copy class="">
+                    <img src="./copy.svg" width="25px" height="25px" alt="">
+                    <span data-copyMsg></span>
+                </button>
+            </div>
+
+            <div class="flex flex-col gap-5  bg-blue-950 text-white p-5 rounded-lg">
+
+                <div class="">
+                    <P class="text-xl text-white font-semibold">Password Length</P>
+
+                    <!-- slider output -->
+                    <p data-lengthNumber>1</p>
+
+                </div>
+
+                <!-- slider -->
+                <input type="range" min="1" max="20" step="1" class="slider" data-lengthSlider>
+
+
+                <!-- checkbox -->
+                <div class="">
+
+                    <div>
+                        <input type="checkbox" id="uppercase" class=" h-4 w-4">
+                        <label for="Ul">Include Uppercase Letters</label><br>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="lowercase">
+                        <label for="Ll">Include Lowercase Letters</label><br>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="numbers">
+                        <label for="Ul">Include Numbers</label><br>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="symbols">
+                        <label for="S">Include Symbols</label><br>
+                    </div>
+                </div>
+
+                <!-- strength -->
+                <div class="flex flex-col gap-6 mb-4">
+                    <p>Strength</p>
+                    <div class="indicator" data-indicator></div>
+                </div>
+
+                <button class="bg-yellow-300 text-green-600 font-bold text-lg py-2 px-14 rounded-lg" id="generateButton">GENERATE PASSWORD</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
